@@ -203,7 +203,7 @@
     display:flex;
     align-items:flex-end;
     background:linear-gradient(180deg, rgba(6,15,29,.55) 0%, rgba(6,15,29,.55) 40%, rgba(6,15,29,.94) 100%),
-               url('images/hero-crane-lift.jpg') center 30%/cover no-repeat;
+               url('hero-crane-lift.jpg') center 30%/cover no-repeat;
   }
   .hero-inner{
     padding:8rem 0 4.5rem;
