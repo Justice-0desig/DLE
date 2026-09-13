@@ -51,7 +51,7 @@
     <div class="hero-inner">
       <p class="eyebrow">Port Harcourt · Rivers State · Nigeria</p>
       <h1>Heavy-Duty Logistics &amp; Engineering, <em>Delivered With Precision.</em></h1>
-      <p class="lead">DonaTech Logistics and Engineering Services (DLEs) moves, lifts and positions the equipment that keeps Nigeria's construction, industrial and energy projects running — safe[...]
+      <p class="lead">DonaTech Logistics and Engineering Services (DLEs) moves, lifts and positions the equipment that keeps Nigeria's construction, industrial and energy projects running — safe[...]</p>
       <div class="btn-row">
         <a href="#contact" class="btn btn-gold">Request a Quote</a>
         <a href="#services" class="btn btn-outline">Our Services</a>
@@ -97,8 +97,8 @@
       <div class="about-copy">
         <p class="eyebrow">About DLEs</p>
         <h2>Built On Fifteen Years Of Heavy Lifting</h2>
-        <p>DonaTech Logistics and Engineering Services (DLEs) is a Port Harcourt-based logistics and engineering solutions provider serving Nigeria's construction, oil &amp; gas, and industrial s[...]
-        <p>Operating from our base at Trans-Amadi Industrial Layout, Port Harcourt, we deploy a fleet of self-loaders, mobile cranes, flatbed trucks and forklifts — each backed by trained opera[...]
+        <p>DonaTech Logistics and Engineering Services (DLEs) is a Port Harcourt-based logistics and engineering solutions provider serving Nigeria's construction, oil &amp; gas, and industrial s[...]</p>
+        <p>Operating from our base at Trans-Amadi Industrial Layout, Port Harcourt, we deploy a fleet of self-loaders, mobile cranes, flatbed trucks and forklifts — each backed by trained opera[...]</p>
         <div class="credential">
           <div>
             <strong>15+</strong>
@@ -286,7 +286,7 @@
         </div>
       </div>
 
-      <form class="quote-form" id="quoteForm">
+      <form class="quote-form" id="quoteForm" action="https://formspree.io/f/mvkojbbb" method="POST">
         <h3>Request A Quote</h3>
         <p>Fill in the details below and our team will respond with equipment availability and pricing.</p>
         <div class="form-row">
@@ -323,7 +323,7 @@
           </div>
         </div>
         <button type="submit" class="btn btn-gold" style="border:none;cursor:pointer;">Submit Request</button>
-        <p class="form-note" id="formStatus" role="status">This form currently displays your request on-screen. Connect it to an email service or backend to receive submissions directly.</p>
+        <p class="form-note" id="formStatus" role="status">Your request will be sent directly to our team.</p>
       </form>
     </div>
   </section>
@@ -392,14 +392,13 @@
     var yearEl = document.getElementById('year');
     if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 
-    // Quote form: basic client-side handling (no backend wired up yet)
+    // Quote form: Formspree integration
     var form = document.getElementById('quoteForm');
     var status = document.getElementById('formStatus');
     if (form && status) {
       form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var name = document.getElementById('fullName').value.trim();
-        status.textContent = 'Thanks' + (name ? ', ' + name : '') + ' — your request details are ready. Connect this form to an email service or backend so submissions reach you directly.';
+        // Allow Formspree to handle the submission
+        status.textContent = 'Sending your request...';
         status.style.color = '#0d2340';
         status.style.fontWeight = '600';
       });
